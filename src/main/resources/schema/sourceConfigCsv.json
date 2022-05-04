@@ -1,0 +1,92 @@
+{
+  "seedColumns": "Account_Number,Last_Discharged_Date",
+  "delimiter": ",",
+  "headers": "Account_Number,Last_Discharged_Date,Transaction_Class,Transaction_Code,Cor_Indicator,Debit_Credit_Indicator,Currency_Code,Full_Name,Narative_Line_2,Phone_Number,Narative_Line_4,Narative_Line_5,Post_Transaction_Running_Balance,Transaction_Amount,Transaction_Mnemonic,Transaction_Date,Sequence_Number\n",
+  "recordConfig": [
+    {
+      "name": "Account_Number",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "Last_Discharged_Date",
+      "value": "generateDate",
+      "min": "2010-01-01",
+      "max": "2019-01-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "Transaction_Class",
+      "value": "generateNull"
+    },
+    {
+      "name": "Transaction_Code",
+      "value": "generatePositiveInt",
+      "pattern": "1234",
+      "null_flag": true,
+      "null_percent": 20
+    },
+    {
+      "name": "Cor_Indicator",
+      "value": "generateBoolean",
+      "pattern": "Yes/No/Maybe"
+    },
+    {
+      "name": "Debit_Credit_Indicator",
+      "value": "generateBoolean",
+      "pattern": "C/D"
+    },
+    {
+      "name": "Currency_Code",
+      "value": "generateCurrency",
+      "pattern": "USD,EUR"
+    },
+    {
+      "name": "Full_Name",
+      "value": "generateFullName"
+    },
+    {
+      "name": "Narative_Line_2",
+      "value": "generateStringFromRegex",
+      "pattern": " ([A-Z][a-z]{2,4} ){2} "
+    },
+    {
+      "name": "Phone_Number",
+      "value": "generateStringFromRegex",
+      "pattern": " \\+[1-9][0-9]?-[1-9][0-9]{8,10} "
+    },
+    {
+      "name": "Narative_Line_4",
+      "value": "generateStringFromRegex",
+      "pattern": " ([B-W][aeiou][d-y]{1,2} ){3} "
+    },
+    {
+      "name": "Narative_Line_5",
+      "value": "generateStringFromRegex",
+      "pattern": " [B-Z][aeiou][b-z]"
+    },
+    {
+      "name": "Post_Transaction_Running_Balance",
+      "value": "generateAmount"
+    },
+    {
+      "name": "Transaction_Amount",
+      "value": "generatePositiveAmount"
+    },
+    {
+      "name": "Transaction_Mnemonic",
+      "value": "generateConstantValue",
+      "pattern": ""
+    },
+    {
+      "name": "Transaction_Date",
+      "value": "generateDate",
+      "min": "2010-01-01",
+      "max": "2019-01-01",
+      "pattern": "dd-M-yyyy"
+    },
+    {
+      "name": "Sequence_Number",
+      "value": "generateInt"
+    }
+  ]
+}

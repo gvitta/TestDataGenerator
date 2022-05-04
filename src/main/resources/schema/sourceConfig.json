@@ -1,0 +1,185 @@
+{
+  "fileType": "FIXEDLENGTH",
+  "fileSubType": "Undischarged",
+  "seedVal": 20190708,
+  "headers": "01CBSUNDISNLRR2506201811:29:30~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n",
+  "recordConfig": [
+    {
+      "name": "Account_Number",
+      "start": 3,
+      "width": 14,
+      "value": "generateInt",
+      "withoutpad": 14,
+      "min": "10000000000000",
+      "max": "99999999999999",
+      "pattern": ""
+    },
+    {
+      "name": "Last_Discharged_Date",
+      "start": 17,
+      "width": 8,
+      "value": "generateDate",
+      "withoutpad": 8,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": " yyyyMMdd "
+    },
+    {
+      "name": "Transaction_Class",
+      "start": 25,
+      "width": 2,
+      "value": "generateConstantValue",
+      "withoutpad": 2,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "99"
+    },
+    {
+      "name": "Transaction_Code",
+      "start": 27,
+      "width": 4,
+      "value": "generateConstantValue",
+      "withoutpad": 4,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": " 9999 "
+    },
+    {
+      "name": "Cor_Indicator",
+      "start": 31,
+      "width": 1,
+      "value": "generateBoolean",
+      "withoutpad": 1,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": ""
+    },
+    {
+      "name": "Debit_Credit_Indicator",
+      "start": 32,
+      "width": 1,
+      "value": "generateBoolean",
+      "withoutpad": 1,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "C/D"
+    },
+    {
+      "name": "Currency_Code",
+      "start": 33,
+      "width": 3,
+      "value": "generateCurrency",
+      "withoutpad": 3,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": ""
+    },
+    {
+      "name": "Narative_Line_1",
+      "start": 36,
+      "width": 25,
+      "value": "generateString",
+      "withoutpad": 25,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "Narative_Line_1          ,Samuel Jackson           ,Robert Downney Junior    "
+    },
+    {
+      "name": "Narative_Line_2",
+      "start": 61,
+      "width": 25,
+      "value": "generateConstantValue",
+      "withoutpad": 25,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "Narative_Line_2          "
+    },
+    {
+      "name": "Narative_Line_3",
+      "start": 86,
+      "width": 25,
+      "value": "generateConstantValue",
+      "withoutpad": 25,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "Narative_Line_3          "
+    },
+    {
+      "name": "Narative_Line_4",
+      "start": 111,
+      "width": 25,
+      "value": "generateConstantValue",
+      "withoutpad": 25,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "Narative_Line_4          "
+    },
+    {
+      "name": "Narative_Line_5",
+      "start": 136,
+      "width": 25,
+      "value": "generateConstantValue",
+      "withoutpad": 25,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "Narative_Line_5          "
+    },
+    {
+      "name": "Post_Transaction_Running_Balance",
+      "start": 161,
+      "width": 16,
+      "value": "generateAmount",
+      "withoutpad": 6,
+      "min": "100000000000000",
+      "max": "999999999999999",
+      "pattern": ""
+    },
+    {
+      "name": "Transaction_Amount",
+      "start": 177,
+      "width": 16,
+      "value": "generatePositiveAmount",
+      "withoutpad": 6,
+      "min": "100000000000000",
+      "max": "999999999999999",
+      "pattern": ""
+    },
+    {
+      "name": "Transaction_Mnemonic",
+      "start": 193,
+      "width": 6,
+      "value": "generateConstantValue",
+      "withoutpad": 6,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": "   MNE"
+    },
+    {
+      "name": "Transaction_Date",
+      "start": 199,
+      "width": 8,
+      "value": "generateDate",
+      "withoutpad": 8,
+      "min": "2017-01-01",
+      "max": "2019-01-01",
+      "pattern": ""
+    },
+    {
+      "name": "Sequence_Number",
+      "start": 207,
+      "width": 22,
+      "value": "generateInt",
+      "withoutpad": 16,
+      "min": "100000000000000000",
+      "max": "9223372036854775807",
+      "pattern": ""
+    }
+  ],
+  "trailer": [
+    {
+      "name": "countOfRecords",
+      "start": 3,
+      "width": 20
+    }
+  ]
+}

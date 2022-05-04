@@ -1,0 +1,367 @@
+{
+  "headers": "record_type,txn_class,correction_ind,txn_code,amendment_ind,txn_date,event_date_and_time,cbs_account_number,account_sort_code,auto_teller_indicator,branch_category,branch_functional_centre_type,teller_id,branch_sort_code,loan_or_term_deposit_no,transaction_sequence,product_market_sector,amount_currency,employee_file_number,channel_outlet_id,statement_reference,cash_box_identifier,ics_txn_seq_no,charging_indicator,balance_currency,amount,balance,foreign_exchange_currency,capital_element,interest_element,capital_balance_outstanding,interest_balance_outstanding,pay_to_sort_code,pay_to_account,cheque_no,pay_to_name,sto_or_dd_number,bacs_reference_number,auddis_indicator,card_no_and_issue_number,local_date_and_time,retailer_identity,visa_local_currency_amount,visa_currency_code,transaction_mode,merchant_name_or_atm_name,merchant_city_or_atm_city,merchant_country_or_atm_country,auto_teller_address,merchant_category_code,acquirer_business_id,cash_amount,visa_transaction_type,visa_sequence_number,terminal_transaction_number,visa_authorisation_code,cap_process_code,cap_batch_code,transaction_source,number_pyts_in_bulk_pyt_txn,acquirer_confirmation_advice_indicator,remittance_information,contra_account_number,payment_source,unauthorised_interest_amount,unauthorised_interest_uncapped_amount,prenotified_unauthorised_interest,charge_category,payment_reference_3,edh_ingest_ts,edh_ingest_delete_flag,edh_source_extract_ts,edh_brand_id,edh_ingest_map\n",
+  "recordConfig": [
+    {
+      "name": "record_type",
+      "value": "generateStringFromRegex",
+      "pattern": "\\^asd[0-9]\\'"
+    },
+    {
+      "name": "txn_class",
+      "value": "generateStringFromRegex",
+      "pattern": "Account: [0-9]{4,7}"
+    },
+    {
+      "name": "correction_ind",
+      "value": "generateBoolean",
+      "pattern": "T/F"
+    },
+    {
+      "name": "txn_code",
+      "value": "generatePositiveInt",
+      "pattern": "1234"
+    },
+    {
+      "name": "amendment_ind",
+      "value": "generateBoolean",
+      "pattern": "T/F"
+    },
+    {
+      "name": "txn_date",
+      "value": "generateDate",
+      "min": "2018-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "event_date_and_time",
+      "value": "generateDate",
+      "min": "2018-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "cbs_account_number",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "account_sort_code",
+      "value": "generatePositiveInt",
+      "pattern": "111"
+    },
+    {
+      "name": "auto_teller_indicator",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "branch_category",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "branch_functional_centre_type",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "teller_id",
+      "value": "generatePositiveInt",
+      "pattern": "1111"
+    },
+    {
+      "name": "branch_sort_code",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "loan_or_term_deposit_no",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "transaction_sequence",
+      "value": "generateStringOfChar",
+      "width": 15
+    },
+    {
+      "name": "product_market_sector",
+      "value": "generateStringOfChar",
+      "width": 2
+    },
+    {
+      "name": "amount_currency",
+      "value": "generateCurrency"
+    },
+    {
+      "name": "employee_file_number",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "channel_outlet_id",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "statement_reference",
+      "value": "generateStringOfChar",
+      "width": 20
+    },
+    {
+      "name": "cash_box_identifier",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "ics_txn_seq_no",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "charging_indicator",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "balance_currency",
+      "value": "generateCurrency"
+    },
+    {
+      "name": "amount",
+      "value": "generateAmount"
+    },
+    {
+      "name": "balance",
+      "value": "generateAmount"
+    },
+    {
+      "name": "foreign_exchange_currency",
+      "value": "generateCurrency"
+    },
+    {
+      "name": "capital_element",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "interest_element",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "capital_balance_outstanding",
+      "value": "generateAmount"
+    },
+    {
+      "name": "interest_balance_outstanding",
+      "value": "generateAmount"
+    },
+    {
+      "name": "pay_to_sort_code",
+      "value": "generatePositiveInt",
+      "pattern": "11111"
+    },
+    {
+      "name": "pay_to_account",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "cheque_no",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "pay_to_name",
+      "value": "generateFullName"
+    },
+    {
+      "name": "sto_or_dd_number",
+      "value": "generateStringOfChar",
+      "width": 20
+    },
+    {
+      "name": "bacs_reference_number",
+      "value": "generateStringOfChar",
+      "width": 8
+    },
+    {
+      "name": "auddis_indicator",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "card_no_and_issue_number",
+      "value": "generateStringOfChar",
+      "width": 16
+    },
+    {
+      "name": "local_date_and_time",
+      "value": "generateDate",
+      "min": "2018-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "retailer_identity",
+      "value": "generateFullName"
+    },
+    {
+      "name": "visa_local_currency_amount",
+      "value": "generatePositiveAmount",
+      "pattern": "100.00"
+    },
+    {
+      "name": "visa_currency_code",
+      "value": "generateCurrency"
+    },
+    {
+      "name": "transaction_mode",
+      "value": "generateStringOfChar",
+      "width": 2
+    },
+    {
+      "name": "merchant_name_or_atm_name",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "merchant_city_or_atm_city",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "merchant_country_or_atm_country",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "auto_teller_address",
+      "value": "generateStringOfChar",
+      "width": 20
+    },
+    {
+      "name": "merchant_category_code",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "acquirer_business_id",
+      "value": "generateStringOfChar",
+      "width": 15
+    },
+    {
+      "name": "cash_amount",
+      "value": "generatePositiveAmount"
+    },
+    {
+      "name": "visa_transaction_type",
+      "value": "generateStringOfChar",
+      "width": 2
+    },
+    {
+      "name": "visa_sequence_number",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "terminal_transaction_number",
+      "value": "generateStringOfChar",
+      "width": 8
+    },
+    {
+      "name": "visa_authorisation_code",
+      "value": "generateStringOfChar",
+      "width": 6
+    },
+    {
+      "name": "cap_process_code",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "cap_batch_code",
+      "value": "generateStringOfChar",
+      "width": 4
+    },
+    {
+      "name": "transaction_source",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "number_pyts_in_bulk_pyt_txn",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "acquirer_confirmation_advice_indicator",
+      "value": "generateBoolean",
+      "pattern": "Y/N"
+    },
+    {
+      "name": "remittance_information",
+      "value": "generateStringOfChar",
+      "width": 30
+    },
+    {
+      "name": "contra_account_number",
+      "value": "generateStringOfChar",
+      "width": 14
+    },
+    {
+      "name": "payment_source",
+      "value": "generateStringOfChar",
+      "width": 4
+    },
+    {
+      "name": "unauthorised_interest_amount",
+      "value": "generatePositiveAmount"
+    },
+    {
+      "name": "unauthorised_interest_uncapped_amount",
+      "value": "generatePositiveAmount"
+    },
+    {
+      "name": "prenotified_unauthorised_interest",
+      "value": "generatePositiveAmount"
+    },
+    {
+      "name": "charge_category",
+      "value": "generateStringOfChar",
+      "width": 1
+    },
+    {
+      "name": "payment_reference_3",
+      "value": "generateStringOfChar",
+      "width": 25
+    },
+    {
+      "name": "edh_ingest_ts",
+      "value": "generateDate",
+      "min": "2017-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "edh_ingest_delete_flag",
+      "value": "generateBoolean",
+      "pattern": "true/false"
+    },
+    {
+      "name": "edh_source_extract_ts",
+      "value": "generateDate",
+      "min": "2017-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "edh_brand_id",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "edh_ingest_map",
+      "value": "generateStringOfChar",
+      "width": 10
+    }
+  ]
+}

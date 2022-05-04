@@ -1,0 +1,150 @@
+{
+  "headers": "record_type,txn_class,correction_ind,txn_code,amendment_ind,txn_date,event_date_and_time,cbs_account_number,account_sort_code,auto_teller_indicator,branch_category,branch_functional_centre_type,teller_id,branch_sort_code,loan_or_term_deposit_no,transaction_sequence,product_market_sector,amount_currency,employee_file_number,channel_outlet_id,cbs_status_type,ted_status_type,status_value,edh_ingest_ts,edh_ingest_delete_flag,edh_source_extract_ts,edh_brand_id,edh_ingest_map\n",
+
+  "recordConfig": [
+    {
+      "name": "record_type",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "txn_class",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "correction_ind",
+      "value": "generateBoolean",
+      "pattern": "T/F"
+    },
+    {
+      "name": "txn_code",
+      "value": "generatePositiveInt",
+      "pattern": "1234"
+    },
+    {
+      "name": "amendment_ind",
+      "value": "generateBoolean",
+      "pattern": "T/F"
+    },
+    {
+      "name": "txn_date",
+      "value": "generateDate",
+      "min": "2018-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "event_date_and_time",
+      "value": "generateDate",
+      "min": "2018-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "cbs_account_number",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "account_sort_code",
+      "value": "generatePositiveInt",
+      "pattern": "111"
+    },
+    {
+      "name": "auto_teller_indicator",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "branch_category",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "branch_functional_centre_type",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "teller_id",
+      "value": "generatePositiveInt",
+      "pattern": "1111"
+    },
+    {
+      "name": "branch_sort_code",
+      "value": "generateStringOfChar",
+      "width": 5
+    },
+    {
+      "name": "loan_or_term_deposit_no",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "transaction_sequence",
+      "value": "generateStringOfChar",
+      "width": 15
+    },
+    {
+      "name": "product_market_sector",
+      "value": "generateStringOfChar",
+      "width": 2
+    },
+    {
+      "name": "amount_currency",
+      "value": "generateCurrency"
+    },
+    {
+      "name": "employee_file_number",
+      "value": "generatePositiveInt"
+    },
+    {
+      "name": "channel_outlet_id",
+      "value": "generateStringOfChar",
+      "width": 10
+    },
+    {
+      "name": "cbs_status_type",
+      "value": "generateStringOfChar",
+      "width": 2
+    },
+    {
+      "name": "ted_status_type",
+      "value": "generateStringOfChar",
+      "width": 4
+    },
+    {
+      "name": "status_value",
+      "value": "generateStringOfChar",
+      "width": 50
+    },
+    {
+      "name": "edh_ingest_ts",
+      "value": "generateDate",
+      "min": "2017-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "edh_ingest_delete_flag",
+      "value": "generateBoolean",
+      "pattern": "true/false"
+    },
+    {
+      "name": "edh_source_extract_ts",
+      "value": "generateDate",
+      "min": "2017-01-01",
+      "max": "2019-08-01",
+      "pattern": "ddMMyyyy"
+    },
+    {
+      "name": "edh_brand_id",
+      "value": "generateStringOfChar",
+      "width": 7
+    },
+    {
+      "name": "edh_ingest_map",
+      "value": "generateStringOfChar",
+      "width": 10
+    }
+  ]
+}
